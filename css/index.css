@@ -1,332 +1,228 @@
 @charset "utf-8";
-*{margin: 0px; padding: 0px; box-sizing: border-box;}
-a{text-decoration: none; color: inherit;}
-ul{list-style-type: none;}
-img{max-width: 100%; vertical-align: middle;}
-table{border-collapse: collapse;}
-button{border:none; background: none; cursor:pointer; font-size:inherit;}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Noto+Serif&display=swap');
 
-.row{width: 960px; margin: 0 auto;}
-body{
-    font-size: 16px; font-family: '나눔고딕';
-} /* 바디에서는 line-height에 em을 쓰지 않는다 */
-#nav{
-    background: #85665c;
-    position: fixed;
-    width:100%;
-    z-index: 99;
-    top:0%;
-    left:0%;
+.row{max-width: 1200px; margin: 0px auto; padding:10 0px;}
+body{color: #666; font-family: 'Noto Sans KR', sans-serif; font-size: 15px;}
+
+#header .outer{ 
+    color: #999;
+    background: #f3f3f3;
+    font-size:12px;
 }
-#nav .depth1{
-    overflow: hidden; 
+#header .member {
+    float:right;
 }
-#nav .depth1 li{
+#header .member a{ 
+    display: inline-block; /* a태그는 상하 패딩이 안먹히므로 display:inline-block 속성을 추가해야한다 */
+    border-right: 1px solid #ddd;
+    padding:8px 18px;    
+}
+#header .member a i{
+    font-size: 9px;
+}
+#header .logo img{
+    margin: 20px 0px;
     float: left;
-    width: 20%;
-    text-align: center;    
+}
+#header .nav{
+    float:right;
+    font-size: 18px;
+    color: #1e1e1e;
+    padding-top: 35px;
+    font-weight: bold;
+}
+#header .nav .depth1 li{
+    display:inline-block;
+    padding: 0px 35px;
+}
+
+/* section */
+
+#section .slide1{
+    background:url(../img/main_img3.jpg) no-repeat center;
+    background-size: cover;
+    height: 650px;
     color: #fff;
-    border: 2px solid transparent; /* 선을 투명하게 해서 배경색이 보이게 */
-}
-#nav .depth1 li a{
-    display: inline-block;
-    padding: 22px 0px;
-}
-#nav .depth1 li:hover{
-    border-bottom:2px solid #fff;
-}
-#header{
-    background: url(../images/header_bg.gif) no-repeat center;
-    background-size:cover;
-    height: 600px; 
+    text-align: center;
     position: relative;
-    margin-top:66px;  
 }
-.header_text{
-    position:absolute;
-    top: 40%;
+#section .slide1 .slidetext1{
+    position: absolute;
+    top:35%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center;
-    color: #333
 }
-.header_text h1 p{
-    font-size: 48px;
-    font-family: '나눔명조';
-    font-weight: lighter;
-    padding: 25px 0px 5px 0px;
+#section .slide1 .slidetext1 h1{
+    font-size: 42px;
+    font-weight: bold;
 }
-.header_text > p{
-    font-size: 22.4px;
-}  
-#ourgallery, #aboutus, #chefmenu, #roadmap, #reservation{
-    padding-top: 110px !important;
-}
-#section{
-    background: url(../images/bg.jpg) repeat;
-    position:relative;
-}
-
-#section > div{
-    padding: 48px 0px;
-}
-#section h2{
-    font-size: 48px;
-    font-family: '나눔명조';
-    font-weight: lighter;
-    text-align: center;
-    color: #85665c;
-    padding-bottom: 20px;
-}
-#section > .article6{
-    padding: 0px;
-}
-.article1{
-    position:relative;
-}
-.main_food{
-    position: relative;
-    text-align: center;
-    margin-top:-188px;
-}
-.article1 ul{
-    display: table; /* 여백 없이 퍼센트로 채우고 싶으면 부모를 display:table 자식을 display:table-cell로 설정해준다 */
-    width:100%; 
-    color:#666;
-    margin-top: 10px;
-} 
-.article1 ul > li{
-    display:table-cell; 
-    width:25%;
-    text-align: center;
-    padding:0 15px;
-    
-}
-.article1 h3{
-    font-size: 25.6px;
-    font-family: '나눔명조';
-    color: #85665c;
-    margin: 40px 0px 10px 0px;
-}
-.article1 p{
+#section .slide1 .slidetext1 p{
     font-size: 16px;
-    color: #666;
-    line-height: 1.5em;
+    line-height: 1.3em;
+    margin: 25px 0px 50px 0px;
 }
-
-.article1 ul > li > img{
-    height: 97px;
+#section .slide1 .slidetext1 a{
+    border: 1px solid #fff;
+    padding: 8px 35px;
 }
-.article2, .article3{
+.article2{
     text-align: center;
-    line-height: 1.5em;
+    padding:70px 0px;
 }
-.article2 ul{overflow: hidden;  /* float의 오류를 잡아주기 위한 태그. 블록 성격의 자식들을 한줄로 정렬하기 위해 float 속성을 사용하면 부모의 높이가 사라지는 부작용이 생긴다. 이것을 해결하기 위해 부모 요소에게 overflow:hidden 속성을 준다 */
-    padding-top: 40px;
+.subtitle h2{
+    font-size:36px;
+    font-weight: bold;
+    color: #000;
 }
-.article2 ul li{
-    float:left;
-    width:25%;
-    margin: 20px 0px;
+.subtitle{
+    margin-bottom:50px;
+}
+.subtitle p{
+    font-size: 14px;
+    margin-top: 15px;
+}
+.article2 .whatimg > div{
+    float: left;
+    width:24%;
+    margin-right: 1%;
+    color: #fff;
+}
+.article2 .whatimg1{
+    background: url(../img/what1.jpg) no-repeat center;
+    background-size: cover;
+    height: 520px;
     position: relative;
 }
-.article2 ul li:hover:after{
-    content:''; 
-    background: rgba(0, 0, 0, 0.5);
+.article2 .whatimg2{
+    background: url(../img/what2.jpg) no-repeat center;
+    background-size: cover;
+    height: 520px;
+    position: relative;
+}
+.article2 .whatimg3{
+    background: url(../img/what3.jpg) no-repeat center;
+    background-size: cover;
+    height: 520px;
+    position: relative;
+}
+.article2 .whatimg4{
+    background: url(../img/what4.jpg) no-repeat center;
+    background-size: cover;
+    height: 520px;
+    position: relative;
+}
+.whattext{
     position: absolute;
-    display: block;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
+    top:63%;
+    left:10%;
+    width: 80%;
+    text-align: left;
+    color: #fff;
 }
-.chef img{
-    width:110px;
-    height:110px;
-    margin: 50px 0px 40px 0px;
+.whattext h3{
+    font-size: 24px;
+    font-weight: bold;
 }
-.chef strong{
-    display:block;
-    font-size: 28.8px;
-    font-family: '나눔명조';
-    color: #404040;
-    font-weight: lighter;
+.whattext p:nth-of-type(1){
+    font-size: 14px;
+    margin: 24px 0 18px 0;
+    line-height: 1.4em;
 }
-.chef p{
-    color:#85665c;
-    margin-top:40px;
+.whattext p:nth-of-type(2){
+    display: inline-block;
+    border: 1px solid #fff;
+    font-size:11px;
+    padding: 8px 40px;
+}
+.article3{
+    background: url(../img/intro_bg.jpg) no-repeat center;
+    background-size: cover;
+    height: 304px;
+    text-align: center;
+    position: relative;
+} 
+.article3 .natural{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;    
+}
+.article3 h2{
+    font-size: 34px;
+    font-weight: bold;
+}
+.article3 p:nth-of-type(1){
+    font-size: 14px;
+    margin: 30px 0px;
+}
+.article3 p:nth-of-type(2){
+    display: inline-block;
+    font-size: 13px;
+    padding: 8px 30px;
+    border: 1px solid #fff;
 }
 .article4{
     text-align: center;
+    padding:70px 0 55px 0;
 }
-.article4 table{
-    width:100%;
-    margin:40px 0px;
+.article4 .product li{
+    float:left;
+    width: 33.33%;
+    padding-right: 1%;
 }
-/* .menu_name{
-    font-size: 25.6px;
-    color: #85665c;
-    padding:20px 0px 5px 0px;
-    text-align: left;
+.article4 .pdtext{
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
 }
-.menu_name strong{
-    font-weight: normal;
-}
-.price{
-    font-size: 22.4px;
-    color:#404040;
+.article4 .pdtext p:first-child{
+    font-size: 17px;
     font-weight: bold;
-    text-align: right;
-}
-.menu_explain{
-    color: #404040;
-    padding-bottom: 20px;
-    text-align: left;
-}
-.menu_name, .price{
-    border-top: 1px solid #ccc;
-}
-.btn{
-    display:inline-block;
-    background: #85665c;
-    border-radius: 50px;    
-    margin-top: 15px;
-} */
-    
-.article4 td{
-    border-bottom:1px solid #85665c;
-    padding:15px 0px;
-    color:#404040;
-}
-.article4 td:nth-child(2){
-    text-align: right;
-    font-size: 22.4px;
-}
-.article4 td:nth-child(1){
-    text-align: left
-}
-.article4 td:nth-child(1) strong{
-    font-size: 25.6px;
-    color: #85665c;
-    font-weight: normal; 
-}
-.article4 td:nth-child(1) p{
-    padding-top:5px;
-}
-.article4 tr:last-child td{
-    border-bottom:none;
-}
-
-.btn a{
-    margin-top:25px;
-    display:inline-block;
-    width:175.2px;
-    height:64px;
-    line-height: 64px;
-    border-radius: 50px;
-    background: #85665c;
-    color: #fff;
-}
-
-/* .article4 .btn button{
-    width:175.2px;
-    height:64px;
-    border-radius: 50px;
-    background: #85665c;
-    color: #fff;
-    font-family: '나눔고딕';
-} */
-
-#detail{
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right : 0; /* 전방향 0은 width, height 100퍼센트와 같다 */
-    background:rgba(0, 0, 0, 0.5);
-    z-index:999;
-    display:none;
-}
-#detail:target{
-    display:block;
-}
-.detailcont{
-    position: absolute;
-    width:400px;
-    background: #fff;
-    color:#000;
     padding:20px;
-    top: 50%;
-    left: 50%;
-    transform:translate(-50%,-50%);
+    color:#000;
 }
-.detailcont .close{
-    display: block;
-    width: 80px;
-    background: red;
-    color: #fff;
-    padding: 10px 0px;
+.article4 .pdtext p:last-child{
+    font-size: 14px;
+    padding:0px 25px 25px;
+    line-height: 1.5em;
+}
+
+/* footer */
+
+#footer{
     text-align: center;
-    border-radius: 10px;
-    margin: 20px auto 0px;
+    color: #ddd;
+    background: #333;
+    padding: 30px 0px;
 }
-.article5{
-    overflow: hidden; /* 자식 속성이 float 기능을 사용해서 벗어났을 때 부모 속성에다 overflow: hidden을 작성해준다 */
+#footer .icon a{
+    font-size:17px;
+    padding: 0px 10px;
 }
-.article5 div{
+#footer .company1 p{
+    display: inline-block;
+    padding: 20px 8px 4px 8px;
+    font-size: 12px;
+}
+#footer .copyright{
+    font-size: 12px;
+}
+#footer .company2 a{
+    display: inline-block;
+    font-size: 11px;
+    border: 1px solid #ddd;
+    padding: 3px 10px;
     margin-top:20px;
 }
-.article5 .info{
-    float:left;
-    width:50%; 
-}
-.article5 .map{
-    float:right;
-    width:50%
-}
-.info pre{   
-    font-family:inherit;
-    line-height: 1.5em;
-    margin-top:5px;
-}
-.article6 {
-    background: #85665c;
-    color:#f4ba8e;
-    font-size: 32px;
+#top{
+    font-size:5px;
     text-align: center;
-    font-family: '나눔명조';
-}
-.article6 div{
-    padding: 45px 0px;    
-}
-.article6 a{
-    color: #fff;
-    padding-left: 20px;
-}
-.article6 img{
-    width: 100%;
-}
-#footer{
-    background: #85665c;
-    color: #fff;
-    font-family: '나눔명조';
-    text-align: center;
-    padding:80px 0px 30px 0px;
-}
-.gotop{
-    position: fixed;
-    right:50px;
-    bottom:50px;
-    width:100px;
-    height:100px;
+    position:fixed;
     background: #000;
-    color:#fff;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 100px;
+    color: #fff;
+    width:40px;
+    padding: 5px;
+    bottom:20px;
+    right:0;
+    line-height: 15px;
 }
-
-/* li+li : li의 동생들을 계속해서 지목. 첫번째 li를 제외하고 전부 지목되게 된다 */
