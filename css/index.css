@@ -65,6 +65,10 @@ body{color: #666; font-family: 'Noto Sans KR', sans-serif; font-size: 15px;}
     border: 1px solid #fff;
     padding: 8px 35px;
 }
+#section .slide1 .slidetext1:hover a{
+    background: #fff;
+    color: #000;
+}
 .article2{
     text-align: center;
     padding:70px 0px;
@@ -111,7 +115,7 @@ body{color: #666; font-family: 'Noto Sans KR', sans-serif; font-size: 15px;}
     height: 520px;
     position: relative;
 }
-.whattext{
+.article2 .whattext{
     position: absolute;
     top:63%;
     left:10%;
@@ -119,16 +123,20 @@ body{color: #666; font-family: 'Noto Sans KR', sans-serif; font-size: 15px;}
     text-align: left;
     color: #fff;
 }
-.whattext h3{
+.article2 .whattext:hover a{
+    background: #fff;
+    color: #000;
+}
+.article2 .whattext h3{
     font-size: 24px;
     font-weight: bold;
 }
-.whattext p:nth-of-type(1){
+.article2 .whattext p:nth-of-type(1){
     font-size: 14px;
     margin: 24px 0 18px 0;
     line-height: 1.4em;
 }
-.whattext a{
+.article2 .whattext a{
     display: inline-block;
     border: 1px solid #fff;
     font-size:11px;
@@ -147,6 +155,10 @@ body{color: #666; font-family: 'Noto Sans KR', sans-serif; font-size: 15px;}
     left: 50%;
     transform: translate(-50%, -50%);
     color: #fff;    
+}
+.article3 .natural:hover a{
+    background: #fff;
+    color: #000;
 }
 .article3 h2{
     font-size: 34px;
