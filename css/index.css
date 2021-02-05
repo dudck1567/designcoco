@@ -12,6 +12,8 @@ body{font-family: 'Noto Sans KR', sans-serif; color:#666; font-size:15px }
    1. 둘다 float정렬 : 부모한테 .cf나 overflow:hidden
    2. 둘 중에 높이가 낮은 자식을 position:absolute 정렬 : 부모한테 position:relative */
 #header > .row { position:relative; }
+#header .open, #header .close{display: none;}
+
 #header h1 { /* float:left;  */ padding:25px 0 }
 #header #nav {  /* float:right; */ z-index:99999;
     position:absolute; top:50%; transform:translateY(-50%);
@@ -30,7 +32,17 @@ body{font-family: 'Noto Sans KR', sans-serif; color:#666; font-size:15px }
 #header .depth2 > li:hover > a { background:#00529b; color:#dfe9fe }
 
 /* .slide-group .slide {  } */
+.article1{ position: relative;}
 .slide-group{ position: relative; }
+.article1 .plpa{
+    position:absolute;
+    bottom:25px; left: 50%; margin-left: 180px;
+    color:#fff;
+    background: none;
+    border: none; 
+    font-size: 18px;
+    outline: none;
+}
 .slide-group .slick-arrow{
     position: absolute;
     top: 50%;
@@ -58,20 +70,20 @@ body{font-family: 'Noto Sans KR', sans-serif; color:#666; font-size:15px }
 }
 .slide-group .slick-dots li{
     display: inline-block;
-    margin: 0 10px;
+    margin: 0 5px;
 }
 .slide-group .slick-dots li button{
-    width: 20px; height: 20px;
+    width: 100px; height: 5px;
     color: transparent;
     background: #fff;
     border: none;
-    border-radius: 50%;
     outline: none;
     cursor: pointer;
+    vertical-align: middle; /* 박스가 버튼에 선을 넣어서 높낮이가 일정하지 않을 때 */
 }
 .slide-group .slick-dots li.slick-active button{
     background:none;
-    border: 2px solid #fff;
+    border: 1px solid #fff;
 }
 
 .slide-group .slide1 { height:650px;
@@ -106,6 +118,7 @@ body{font-family: 'Noto Sans KR', sans-serif; color:#666; font-size:15px }
 .slide-group .slide.slick-active .slide_text a{
     animation: fadeIn 0.5s both 0.7s;
 }
+.slide-group .slide.slick-cloned .slide_text { opacity:0; }
 
 #section h2 { color: #000; font-size: 36px; line-height: 42px; font-weight: 700;
     padding:80px 0 10px; text-align:center; }
